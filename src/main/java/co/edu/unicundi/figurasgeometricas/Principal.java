@@ -1,23 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package co.edu.unicundi.figurasgeometricas;
 
 import java.util.Scanner;
 
 /**
  * Clase Principal
+ * donde se pediran los valores para calcular e imprimir el resultado
  * @author LAURA BABATIVA
  */
 public class Principal {
     public static void main(String[] args) {
+        /**
+         * Se implementa un escaner de texto para recoger los datos instroduzidos por el usuario
+         * Se crean variables propias de la clase principal
+         */
+        
         Scanner numeroOpc = new Scanner(System.in);
         Scanner valor1 = new Scanner(System.in);
         Scanner valor2 = new Scanner(System.in);
         Scanner valor3 = new Scanner(System.in);
-        //Indica si salimos o no
+        
         boolean salir = false;
         int opcion;
         double radio;
@@ -26,22 +27,20 @@ public class Principal {
         double lado3;
         double base;
         double altura;
+        /**
+         * Se referencia la clase padre para instanciar las clases hijas
+         */
         FigurasGeometricas figura;
-        //Bucle para pedir las opciones hasta que elijamos salir
+        
         while (!salir) {
 
-            //opciones
             System.out.println("---------Menu Principal---------");
             System.out.println("----Escoge una opcion\n----Para hallar el perimetro y el area.");
             System.out.println("1. Cuadrado\n2. Rectangulo\n3. Triangulo\n4. Circulon\n5. Salir");
 
             try{
-            
-                //Pide una opcion
                 System.out.println("Introduce un numero: ");
                 opcion = numeroOpc.nextInt();
-
-                //Realiza una de las opciones
                 switch (opcion) {
                     case 1:
                         System.out.println("-AREA Y PERIMETRO DEL CUADRADO");
@@ -91,9 +90,9 @@ public class Principal {
                     default:
                         System.out.println("La opcion no es valida\nPor favor introducir una opcion entre 1 y 5");
                 }
-            
-                
-            //controla la excepcionn en caso de que se introduzca un valor no correcto
+            /**
+             * Excepcion por si introduce una opcion incorrecta
+             */
             }catch(Exception e){
                 System.out.println("Debes escribir un numero");
                 numeroOpc.next();
