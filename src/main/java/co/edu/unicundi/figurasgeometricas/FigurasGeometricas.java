@@ -27,7 +27,7 @@ public abstract class FigurasGeometricas implements IFigura{
     
     public abstract double getArea();
     public abstract double getPerimetro();
-    public abstract String getNombre();
+    //public abstract String getNombre();
     
     /**
      * Contructor por parametros

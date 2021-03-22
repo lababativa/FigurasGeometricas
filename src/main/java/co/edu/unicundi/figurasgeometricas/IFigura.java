@@ -10,5 +10,5 @@ package co.edu.unicundi.figurasgeometricas;
  * @author LAURA BABATIVA
  */
 public interface IFigura {
-    
+    public abstract String getNombre();
 }
